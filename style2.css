@@ -694,16 +694,18 @@ nav {
 
 @media (max-width: 768px) {
     #hero {
-      min-height: auto;
-      padding: 80px 0 40px;
+      min-height: 50vh; /* Reduce height on mobile */
+      height: auto;
+      padding-top: 70px; /* Account for smaller header on mobile */
+      margin-bottom: 20px;
+    }
+    
+    .hero-content {
+      padding: 30px 0;
     }
     
     .hero-content h1 {
       font-size: 2rem; /* Smaller font on mobile */
-    }
-    
-    .hero-content p {
-      font-size: 1rem;
     }
   }
 
