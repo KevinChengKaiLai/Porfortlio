@@ -522,13 +522,21 @@ nav {
 /* ============================================
    HERO SECTION - Enhanced with subtle animations
    ============================================ */
-#hero {
+/* #hero {
     min-height: 60vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-}
+    
+} */
+
+#hero {
+    min-height: 60vh; /* Change this */
+    height: auto; /* Add this */
+    padding: 100px 0 50px; /* Add explicit padding for better mobile display */
+    margin-bottom: 20px; /* Ensure space after hero section */
+  }
 
 /* Add animated background gradient */
 #hero::before {
