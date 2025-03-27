@@ -707,20 +707,27 @@ nav {
     font-weight: 500;
 }
 
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
     #hero {
-      min-height: 20vh; /* Reduce height on mobile */
-      height: auto;
-      padding-top: 70px; /* Account for smaller header on mobile */
-      margin-bottom: 20px;
+      min-height: auto; /* Remove minimum height constraint */
+      height: auto; /* Let content determine height */
+      padding: 100px 0 30px; /* Add padding instead of fixed height */
+      margin-bottom: 0;
     }
     
     .hero-content {
-      padding: 30px 0;
+      padding: 20px 0;
     }
     
     .hero-content h1 {
-      font-size: 2rem; /* Smaller font on mobile */
+      font-size: 2.2rem; /* Smaller font on mobile */
+      margin-bottom: 10px;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+      margin-bottom: 15px;
     }
   }
 
