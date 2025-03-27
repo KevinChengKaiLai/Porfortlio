@@ -532,8 +532,8 @@ nav {
 } */
 
 #hero {
-    min-height: 60vh; /* Change this */
     height: auto; /* Add this */
+    min-height: 20vh; /* Change this */
     padding: 100px 0 50px; /* Add explicit padding for better mobile display */
     margin-bottom: 20px; /* Ensure space after hero section */
   }
