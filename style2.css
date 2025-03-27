@@ -409,6 +409,17 @@ header {
     transition: var(--transition);
 }
 
+/* Make sure your first section after header has proper spacing */
+#resume, #about {
+  padding-top: 80px; /* Adjust based on your header height */
+}
+
+@media (max-width: 768px) {
+  #resume, #about {
+    padding-top: 70px; /* Adjust for mobile */
+  }
+}
+
 .header-scrolled {
     padding: 0.5rem 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -532,12 +543,16 @@ nav {
 } */
 
 #hero {
-    height: auto; /* Add this */
-    min-height: 20vh; /* Change this */
-    padding: 100px 0 50px; /* Add explicit padding for better mobile display */
-    margin-bottom: 20px; /* Ensure space after hero section */
+    min-height: 60vh; /* Keep for desktop */
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: visible; /* Change from 'hidden' to 'visible' */
+    padding-top: 80px; /* Add explicit padding to account for fixed header */
+    margin-bottom: 30px; /* Ensure space after the hero */
   }
 
+  
 /* Add animated background gradient */
 #hero::before {
     content: '';
