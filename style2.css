@@ -710,24 +710,12 @@ nav {
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
     #hero {
-      min-height: auto; /* Remove minimum height constraint */
-      height: auto; /* Let content determine height */
-      padding: 100px 0 30px; /* Add padding instead of fixed height */
-      margin-bottom: 0;
+      display: none; /* This completely hides the hero section */
     }
     
-    .hero-content {
-      padding: 20px 0;
-    }
-    
-    .hero-content h1 {
-      font-size: 2.2rem; /* Smaller font on mobile */
-      margin-bottom: 10px;
-    }
-    
-    .hero-content p {
-      font-size: 1rem;
-      margin-bottom: 15px;
+    /* Add some padding to the first visible section after hero */
+    #resume {
+      padding-top: 80px; /* Ensure there's space below the header */
     }
   }
 
