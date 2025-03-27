@@ -1142,6 +1142,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        });
+    }
+    });
+    
     // Update active menu item based on scroll position
     window.addEventListener('scroll', function() {
         let current = '';
