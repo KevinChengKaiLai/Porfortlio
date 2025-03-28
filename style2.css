@@ -190,23 +190,6 @@ p {
     grid-template-columns: repeat(4, 1fr);
 }
 
-@media (max-width: 992px) {
-    .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .grid-2, .grid-3, .grid-4 {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ============================================
    SECTION HEADERS - Enhanced with animations
@@ -414,11 +397,7 @@ header {
   padding-top: 80px; /* Adjust based on your header height */
 }
 
-@media (max-width: 768px) {
-  #resume, #about {
-    padding-top: 70px; /* Adjust for mobile */
-  }
-}
+
 
 .header-scrolled {
     padding: 0.5rem 0;
@@ -495,40 +474,7 @@ nav {
     transform: rotate(90deg);
 }
 
-/* Mobile menu enhancements */
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
 
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: var(--white);
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 2rem;
-        transition: var(--transition);
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        left: 0;
-        box-shadow: var(--shadow);
-    }
-
-    .nav-links li {
-        margin: 1.5rem 0;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-    }
-}
 
 /* ============================================
    HERO SECTION - Enhanced with subtle animations
@@ -707,17 +653,7 @@ nav {
     font-weight: 500;
 }
 
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-    #hero {
-      display: none; /* This completely hides the hero section */
-    }
-    
-    /* Add some padding to the first visible section after hero */
-    #resume {
-      padding-top: 80px; /* Ensure there's space below the header */
-    }
-  }
+
 
 /* ============================================
    ABOUT SECTION - Enhanced with better hover effects
@@ -2350,194 +2286,7 @@ footer::before {
 /* ============================================
    RESPONSIVE STYLES - Enhanced for better mobile experience
    ============================================ */
-@media (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-    
-    .section {
-        padding: 4rem 0;
-    }
-}
 
-@media screen and (max-width: 992px) {
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-
-    .about-img {
-        margin-bottom: 2rem;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .timeline::after {
-        left: 31px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline-item::after {
-        left: 18px;
-    }
-
-    .right {
-        left: 0;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info {
-        margin-bottom: 2rem;
-    }
-    
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .section {
-        padding: 3rem 0;
-    }
-    
-    .section-title h2 {
-        font-size: 2rem;
-    }
-    
-    .filter-buttons {
-        gap: 10px;
-    }
-    
-    .filter-btn {
-        padding: 6px 16px;
-        font-size: 14px;
-    }
-    
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: var(--white);
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 2rem;
-        transition: var(--transition);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 1.5rem 0;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .languages-container {
-        justify-content: center;
-    }
-    
-    .education-header {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .education-icon {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-    
-    .education-school {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .education-school img {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-    
-    .education-stats {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .course-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .education-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .extracurricular-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 576px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .project-img {
-        height: 250px;
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-    
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-form, .contact-info {
-        padding: 25px;
-    }
-    
-    .contact-form h3, .contact-info h3 {
-        font-size: 1.8rem;
-    }
-    
-    .footer-links a {
-        margin: 0 10px 10px;
-    }
-}
 
 /* ============================================
    ANIMATIONS - Added keyframes for various animations
@@ -2587,45 +2336,7 @@ footer::before {
 /* ============================================
    PRINT STYLES - For better resume printing
    ============================================ */
-@media print {
-    header, 
-    footer, 
-    .back-to-top,
-    #contact {
-        display: none;
-    }
-    
-    body {
-        background-color: white;
-        color: black;
-    }
-    
-    .section {
-        padding: 1rem 0;
-        page-break-inside: avoid;
-    }
-    
-    .container {
-        max-width: 100%;
-    }
-    
-    .card,
-    .project-card,
-    .education-card,
-    .skills-category {
-        box-shadow: none;
-        border: 1px solid #ddd;
-    }
-    
-    a {
-        color: #000;
-        text-decoration: none;
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-}
+
 
 /* ============================================
    UTILITY CLASSES - Added for more flexibility
@@ -3446,9 +3157,118 @@ html {
   }
   
   /* Fix for mobile navigation to ensure proper scrolling */
+
+/* Base media queries for larger screens */
+@media (max-width: 992px) {
+    .grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
   @media (max-width: 768px) {
+    .grid-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Header adjustments */
+    header {
+      height: 70px;
+      z-index: 1000;
+    }
+    
+    /* Make header text smaller */
+    .logo {
+      font-size: 1.4rem !important;
+    }
+    
+    /* Nav links */
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background-color: var(--white);
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 2rem;
+      transition: var(--transition);
+      z-index: 999;
+    }
+    
+    .nav-links.active {
+      left: 0;
+      box-shadow: var(--shadow);
+    }
+    
+    .nav-links li {
+      margin: 1.5rem 0;
+    }
+    
+    .nav-links a {
+      font-size: 1.2rem;
+    }
+    
+    /* Section spacing */
+    .section {
+      padding: 3rem 0;
+    }
+    
+    /* Typography - Make ALL titles smaller */
+    .section-title h2 {
+      font-size: 1.8rem !important;
+    }
+    
+    /* Card titles */
+    .card-title, 
+    .project-title, 
+    .education-title h3 {
+      font-size: 1.4rem !important;
+    }
+    
+    /* Subtitles */
+    .card-subtitle-organization,
+    .card-subtitle-name,
+    .card-subtitle-date,
+    .card-subtitle-location,
+    .education-title p,
+    .publication-journal {
+      font-size: 0.9rem !important;
+    }
+    
+    /* Convert all multi-column layouts to single column */
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-img {
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .education-row {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+      width: 100% !important; /* Fix the 150% width issue */
+      margin-bottom: 2rem;
+    }
+    
+    /* Fix scrolling behavior */
     html {
-      scroll-padding-top: 70px; /* Adjust for smaller header on mobile */
+      scroll-padding-top: 70px;
     }
     
     section[id] {
@@ -3459,3 +3279,283 @@ html {
       padding-top: 15px;
     }
   }
+  
+  /* iPhone and mobile specific adjustments */
+  @media (max-width: 768px) {
+    /* Make ALL containers single-column */
+    .card-container {
+      display: grid;
+      grid-template-columns: 1fr !important;
+      gap: 30px !important;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr !important;
+    }
+    
+    .publications-container {
+      grid-template-columns: 1fr !important;
+    }
+    
+    .resume-container {
+      grid-template-columns: 1fr !important;
+    }
+    
+    /* Fix header and section overlapping issues */
+    section {
+      padding-top: 80px !important;
+      margin-top: -10px;
+    }
+    
+    #resume, #about, #academic, #professional, #skills, #projects, #publications, #contact {
+      padding-top: 80px !important;
+      z-index: 1;
+    }
+    
+    /* Improve typography for smaller screens */
+    h1 {
+      font-size: 1.8rem !important;
+    }
+    
+    h2 {
+      font-size: 1.6rem !important;
+    }
+    
+    h3 {
+      font-size: 1.4rem !important;
+    }
+    
+    h4 {
+      font-size: 1.2rem !important;
+    }
+    
+    /* Hero section text */
+    .hero-content h1 {
+      font-size: 1.8rem !important;
+    }
+    
+    .hero-content p {
+      font-size: 1rem !important;
+    }
+    
+    /* Card adjustments for improved mobile display */
+    .card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .card-img {
+      height: 220px;
+    }
+    
+    /* Ensure proper spacing and margins */
+    .container {
+      padding: 0 15px;
+    }
+    
+    /* Allow more breathing room for content */
+    .card-body, 
+    .project-content,
+    .education-body,
+    .publication-item,
+    .contact-info,
+    .contact-form {
+      padding: 20px;
+    }
+    
+    /* Fix font sizes for better readability */
+    p, .card-text, .project-description {
+      font-size: 0.95rem !important;
+      line-height: 1.6;
+    }
+    
+    /* Section headers */
+    .about-text h3,
+    .skills-category h3,
+    .publication-category h3 {
+      font-size: 1.3rem !important;
+    }
+    
+    /* Contact section */
+    .contact-info h3, 
+    .contact-form h3 {
+      font-size: 1.4rem !important;
+    }
+    
+    .contact-details h4 {
+      font-size: 1.1rem !important;
+    }
+  }
+  
+  /* Extra small screens like older iPhones */
+  @media (max-width: 380px) {
+    /* Further reduce font sizes */
+    .logo {
+      font-size: 1.2rem !important;
+    }
+    
+    h1 {
+      font-size: 1.6rem !important;
+    }
+    
+    h2 {
+      font-size: 1.4rem !important;
+    }
+    
+    h3 {
+      font-size: 1.2rem !important;
+    }
+    
+    /* Further reduce paddings */
+    .card-body, 
+    .project-content,
+    .education-body,
+    .publication-item,
+    .contact-info,
+    .contact-form {
+      padding: 15px;
+    }
+    
+    /* Reduce icon sizes */
+    .contact-icon, 
+    .highlight-icon, 
+    .education-icon {
+      width: 35px;
+      height: 35px;
+      font-size: 0.9rem;
+    }
+    
+    /* Make sure buttons fit */
+    .btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+
+  /* publication Section */
+
+  /* Improved Publication Layout for Mobile */
+@media (max-width: 768px) {
+    /* Restructure the publication item for better mobile display */
+    .publication-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 25px;
+      position: relative;
+    }
+    
+    /* Move year to the top */
+    .publication-year {
+      position: relative;
+      width: auto;
+      font-size: 1.1rem !important;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-align: left;
+      padding: 5px 15px 5px 0;
+      background-color: transparent;
+      border-bottom: 2px solid rgba(45, 70, 185, 0.2);
+      margin-bottom: 15px;
+      min-width: 0;
+      height: auto;
+      align-self: flex-start;
+    }
+    
+    /* Allow content to use full width */
+    .publication-content {
+      width: 100%;
+      padding-left: 0;
+    }
+    
+    /* Adjust title font size */
+    .publication-content h4 {
+      font-size: 1.2rem !important;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    
+    /* Make authors and journal smaller */
+    .publication-authors,
+    .publication-journal {
+      font-size: 0.9rem !important;
+      margin-bottom: 8px;
+    }
+    
+    /* Make abstract more readable */
+    .publication-abstract {
+      font-size: 0.9rem !important;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    
+    /* Improve spacing of links */
+    .publication-links {
+      margin-top: 10px;
+    }
+    
+    .publication-links .btn-small {
+      padding: 5px 10px;
+      font-size: 0.8rem;
+    }
+    
+    /* Add more space between multiple papers */
+    .publication-item:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 380px) {
+    .publication-year {
+      font-size: 1rem !important;
+    }
+    
+    .publication-content h4 {
+      font-size: 1.1rem !important;
+    }
+    
+    .publication-authors,
+    .publication-journal,
+    .publication-abstract {
+      font-size: 0.85rem !important;
+    }
+  }
+
+
+  /* Change social media icons to white */
+.social-links a i,
+.contact-item .social-links a i {
+  color: white !important;
+}
+
+/* Add better contrast by adjusting the background */
+.social-links a,
+.contact-item .social-links a {
+  background-color: var(--primary-color) !important;
+}
+
+/* Add hover effect for better interaction */
+.social-links a:hover,
+.contact-item .social-links a:hover {
+  background-color: var(--accent-color) !important;
+  transform: translateY(-3px) rotate(360deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific adjustments for mobile */
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .social-links a,
+  .contact-item .social-links a {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
