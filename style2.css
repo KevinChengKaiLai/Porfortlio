@@ -430,6 +430,37 @@ nav {
     transform: scale(1.05);
 }
 
+/* Fix for navigation link colors */
+.nav-links a {
+    color: var(--text-color) !important; /* Make all nav links the same color */
+  }
+  
+  /* Style for active/current page link */
+  .nav-links a.active {
+    color: var(--primary-color) !important; /* This will be blue for the active page */
+  }
+  
+  /* Style for hover state */
+  .nav-links a:hover {
+    color: var(--primary-color) !important;
+  }
+  
+  /* Fix the underline to match the active state */
+  .nav-links a::after {
+    background-color: transparent; /* Start with transparent underline */
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a.active::after {
+    background-color: var(--primary-color) !important; /* Blue underline for active */
+    width: 100% !important; /* Make sure it's full width */
+  }
+  
+  .nav-links a:hover::after {
+    background-color: var(--primary-color) !important;
+    width: 100%;
+  }
+  
 .nav-links {
     display: flex;
     list-style: none;
