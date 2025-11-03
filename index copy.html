@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheng Kai Portfolio</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <!-- oto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style2.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Cheng Kai (Kevin) Lai</a>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#resume" >Resume</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#academic">Academic</a></li>
+                    <li><a href="#professional">Professional</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <!-- <li><a href="#extracurricular">Extracurricular</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cheng Kai Lai</h1>
+                <p>AI Engineer & Chemical Engineer with a passion for AI applications in chemical engineering</p>
+                <!-- <a href="#about" class="btn hero-btn">Learn More About Me</a> -->
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="resume" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Resume</h2>
+            </div>
+            <div class="resume-container">
+                <!-- Resume preview card on the left -->
+                <div class="resume-card">
+                    <div class="resume-preview">
+                        <img src="pic/Resume.jpg" alt="Resume Preview" onerror="this.src='/api/placeholder/300/400'; this.alt='Resume Preview Placeholder'">
+                    </div>
+                    <div class="resume-actions">
+                        <a href="Kevin_Resume.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <a href="Kevin_Resume.pdf" class="btn btn-outline" target="_blank">
+                            <i class="fas fa-eye"></i> View Full Resume
+                        </a>
+                    </div>
+                </div>
+                <!-- Resume information on the right -->
+                <div class="resume-info">
+                    <h3>Know more about professional me</h3>
+                    <p>Download my complete resume to learn more about my education, work experience, skills, and accomplishments.</p>
+                    <div class="resume-highlights">
+                        <!-- Education highlight -->
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Education</h4>
+                                <p>MS in AI Engineering (CMU) & BS in Chemical Engineering (NTU)</p>
+                            </div>
+                        </div>
+                        <!-- Experience highlight -->
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Experience</h4>
+                                <p>Internships and research positions in data science and AI</p>
+                            </div>
+                        </div>
+                        <!-- Skills highlight -->
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Skills</h4>
+                                <p>Machine learning, computer vision, and data engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                
+                <div class="about-text">
+                    <h3>Biography</h3>
+                    <p>Hello! I'm Cheng-Kai Lai, a student with a Master of Science in Artificial Intelligence Engineering from Carnegie Mellon University. I have a strong background in applying data science and AI techniques to industry challenges.</p>
+                    <p>My research interests include AI agent, Nature Language Processing,  machine learning applications in chemical processes, CO2 hydrogenation catalysts, and advanced data analysis for process optimization. I'm passionate about developing efficient machine learning algorithms for chemical plants and dedicated to bridging the gap between traditional chemical engineering and modern artificial intelligence.</p>
+                    <p>I believe in taking action to solve problems and continuously challenge myself to grow through learning and practical application. My experiences have shaped me into someone who values teamwork, responsibility, and continuous improvement. Oh, by the way, feel free to call me Kevin!</p>
+
+                    
+                </div>
+                <div class="about-img">
+                    <div class="image-rotator">
+                        <img src="/pic/me in SF.jpg" alt="About Me 1" class="active">
+                        <!-- <img src="/pic/me in boston.jpg" alt="About Me 2"> -->
+                        <!-- <img src="/pic/mountainpic.JPG" alt="About Me 3"> -->
+                        <!-- <img src="/pic/me snow.jpg" alt="About Me 4"> -->
+                        <!-- <img src="/pic/B08504052 賴正鎧.jpeg" alt="About Me 5"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // JavaScript for rotating images
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.image-rotator img');
+        const totalImages = images.length;
+    
+        function rotateImages() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].classList.add('active');
+        }
+    
+        setInterval(rotateImages, 4000); // Change image every 3 seconds
+    </script>
+
+    <!-- Academic Section -->
+    <section id="academic" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Academic Background</h2>
+            </div>
+            
+            <!-- Education Cards -->
+            <div class="education-container education-row">
+                <!-- Masters -->
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>Master of Science</h3>
+                            <p>Artificial Intelligence Engineering</p>
+                        </div>
+                    </div>
+                    <div class="education-body">
+                        <div class="education-school">
+                            <img src="pic/CMU logo.png" alt="CMU Logo">
+                            <div>
+                                <h4><a href="https://www.cmu.edu/">Carnegie Mellon University</a></h4> 
+                                <span class="education-date">Sep 2024 - Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="education-details">
+                            <h5> Coursework:</h5>
+                            <ul class="course-list">
+                                <li><span>18-786:</span> Deep Learning</li>
+                                <li><span>10-601:</span> Machine Learning</li>
+                                <li><span>14-763:</span> Systems and Tool Chains for AI Engineering</li>
+                                <li><span>06-707:</span> Advanced Transport Phenomena</li>
+                                <li><span>06-623:</span> Mathematical Modeling in Chemical Engineering</li>
+                                <li><span>06-625:</span> Chemical Reactive System</li>
+                                <li><span>12-726:</span> Mathematical Modeling in Environmental Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Undergraduate -->
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>Bachelor of Science</h3>
+                            <p>Chemical Engineering</p>
+                        </div>
+                    </div>
+                    <div class="education-body">
+                        <div class="education-school">
+                            <img src="pic/Ntu_logo.jpg" alt="NTU Logo">
+                            <div>
+                                <h4><a href="https://www.ntu.edu.tw/english/"> National Taiwan University</a></h4>
+                                <span class="education-date">Sep 2019 - Jun 2023</span>
+                            </div>
+                        </div>
+                        <div class="education-details">
+                            <h5> Coursework:</h5>
+                            <ul class="course-list">
+                                <li>Data Analysis and Machine Learning </li>
+                                <li>Data Science and Decision Technology </li>
+                                <li>AI Application in Chemical Engineering </li>
+                                <li>Computer Programming </li>
+                                <li>Numerical Methods </li>
+                                <li>Statistics and Probability </li>
+                                <li>Use Python and Excel Design Numerical Modelg</li>
+                                <li>Calculus and Mathematics</li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-container" >
+                <!-- Additional Education -->
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>Additional Education</h3>
+                            <p>Online Certifications</p>
+                        </div>
+                    </div>
+                    <div class="education-body">
+                        <div class="education-school">
+                            <img src="pic/coursera_logo.png" alt="Coursera Logo">
+                            <div>
+                                <h4>UCSD on Coursera</h4>
+                                <span class="education-date">2023</span>
+                            </div>
+                        </div>
+                        <div class="education-details">
+                            <h5>Data Structures and Algorithms Specialization</h5>
+                            <p>Immersed myself in the captivating universe of algorithmic thinking, where elegant solutions bloom like rare flowers from the fertile soil of computational challenges. Mastered the symphonic interplay of greedy algorithms, divide-and-conquer strategies, and the mesmerizing recursions of dynamic programming. Navigated through the labyrinthine beauty of graph theories and string algorithms while constructing efficient data structures that dance with mathematical precision.</p>
+                            <div class="cs50-skills">
+                                <div class="skill-tag">Algorithmic Toolbox</div>
+                                <div class="skill-tag">Dynamic Programming</div>
+                                <div class="skill-tag">Graph Algorithms</div>
+                                <div class="skill-tag">String Processing</div>
+                                <div class="skill-tag">Advanced Complexity</div>
+                                <div class="skill-tag">Network Flows</div>
+                                <div class="skill-tag">Hash Tables</div>
+                                <div class="skill-tag">Technical Interview Preparation</div>
+                            </div>
+                        </div>
+                        <div style="margin: 25px 0; border-bottom: 2px solid #000000;"></div>
+                        <div class="education-school">
+                            <img src="pic/Harvard logo.png" alt="Harvard Logo">
+                            <div>
+                                <h4>Harvard CS50</h4>
+                                <span class="education-date">2023</span>
+                            </div>
+                        </div>
+                        <div class="education-details">
+                            <h5>Introduction to Computer Science</h5>
+                            <p>Embarked on a transformative journey through Harvard's prestigious CS50 course, exploring the vibrant landscape of computer science fundamentals and programming artistry. Mastered a constellation of languages including C, Python, JavaScript, SQL, HTML, and CSS, while developing a deep understanding of algorithms, data structures, memory management, and software engineering principles that form the beating heart of modern computing.</p>
+                            <div class="cs50-skills">
+                                <div class="skill-tag">Problem Solving</div>
+                                <div class="skill-tag">Algorithms</div>
+                                <div class="skill-tag">Data Structures</div>
+                                <div class="skill-tag">Memory Management</div>
+                                <div class="skill-tag">Web Development</div>
+                                <div class="skill-tag">Multiple Programming Languages</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Professional Section -->
+    <section id="professional" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="card-container">
+                <!-- Work Experience 1 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/pic/data scientist.png" alt="Work Experience 1">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Data Scientist Intern</h3>
+                        <div class="card-subtitle-container">
+                            <span class="card-subtitle-organization">Micron Technology, Inc.</span>
+                            <span class="card-subtitle-date">Jul 2023 - Aug 2023</span>
+                        </div>
+                        <div class="card-subtitle-container">
+                            <span class="card-subtitle-name">Advanced Packaging Technology Development</span>
+                            <span class="card-subtitle-location">Taichung, Taiwan</span>
+                        </div>
+                        <p class="card-text">Developed advanced object detection models and computer vision solutions for the Advanced Packaging Technology Development team, delivering significant improvements to quality control processes.</p>
+                        <ul>
+                            <li>Developed object detection model using PyTorch, OpenCV, and YOLOv8 to measure HBM die alignment shifts with 3 µm spatial and 0.1° angular precision</li>
+                            <li>Optimized model training with data labeling and augmentation techniques on 1,000+ 3DCT images, improving spatial precision from 16 µm to 3 µm (81.25%)</li>
+                            <li>Eliminated real-time defect analysis costs from $200/hr to $0/hr by replacing scanning electron microscope methods</li>
+                            <li>Created comprehensive documentation for non-technical stakeholders to adjust detection sensitivity based on manufacturing requirements</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Research Experience 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="pic/AI_ChemE.png" alt="Research Experience">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">AI Agent for Chemical Process Optimization</h3>
+                        <div class="card-subtitle-container">
+                            <span class="card-subtitle-organization">Mechanical and AI LAB, CMU</span>
+                            <span class="card-subtitle-date">Jan 2025 - Present</span>
+                        </div>
+                        <div class="card-subtitle-container">
+                            <span class="card-subtitle-name">Academic Research Student</span>
+                            <span class="card-subtitle-location">Pittsburgh, PA</span>
+                        </div>
+                        <p class="card-text">Working with Prof. Amir Barati Farimani to develop intelligent AI agents for optimizing chemical process operations through simulation and modeling.</p>
+                        <ul>
+                            <li>Training AI agents for chemical plants unit operation control using AutoGen and LangChain</li>
+                            <li>Utilizing Pyomo and IDAES to construct process flowsheets in Python</li>
+                            <li>Creating decision-making frameworks for AI agents in chemical process simulations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="card-container">
+                <!-- Research Experience -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="pic/MA.png" alt="Research Experience 2">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Maleic Anhydride Process Simulation</h3>
+                        <div class="card-subtitle-container">
+                            <span class="card-subtitle-organization">Process System Engineering LAB, NTU</span>
+                            <span class="card-subtitle-date">Feb 2023 - Dec 2023</span>
+                        </div>
+                        <div class="card-subtitle-container">
+                            <span class="card-subtitle-name">Academic Research Student</span>
+                            <span class="card-subtitle-location">Taipei, Taiwan</span>
+                        </div>
+                        
+                        <p class="card-text">Conducting research on optimizing the production process of maleic anhydride through advanced process system engineering techniques.</p>
+                        <ul>
+                            <li>Developed a comprehensive simulation model for maleic anhydride production using Aspen Plus</li>
+                            <li>Analyzed process parameters to enhance yield and reduce energy consumption by 15%</li>
+                            <li>Collaborated with a multidisciplinary team to integrate AI-driven optimization strategies</li>
+                            <li>Published findings in a peer-reviewed journal, contributing to the field of chemical process optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img src="pic/CO2.png" alt="Catalyst Research Laboratory">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">CO2 Hydrogenation Catalyst Design</h3>
+                        <div class="card-subtitle-container">
+                            <span class="card-subtitle-organization">Catalyst LAB, NTU</span>
+                            <span class="card-subtitle-date">Mar 2022 - Jun 2023</span>
+                        </div>
+                        <div class="card-subtitle-container">
+                            <span class="card-subtitle-name">Independent Research Student</span>
+                            <span class="card-subtitle-location">Taipei, Taiwan</span>
+                        </div>
+                        <p class="card-text">Conducted independent research under Prof. Chi-Sheng Wu, focusing on developing efficient catalysts for CO2 conversion to valuable chemicals.</p>
+                        <ul>
+                            <li>Participated in weekly research discussions to develop and refine catalyst design strategies</li>
+                            <li>Developed experimental skills in catalyst synthesis, property analysis, and performance testing</li>
+                            <li>Focused on Pd-In2O3 catalysts to enhance methanol production efficiency</li>
+                            <li>Applied data analysis techniques to correlate catalyst properties with performance metrics</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Skills Section HTML Update -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-container">
+                <!-- Machine Learning Skills -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">PyTorch</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >TensorFlow</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >Scikit-learn</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >OpenCV</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >Deep Learning</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >Computer Vision</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >NLP</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >Reinforcement Learning</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >AI Agent</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 35%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                <!-- Data Engineering Skills -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-database"></i> Data Engineering</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name" >Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >PySpark</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >SQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >Docker</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"  >Git</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"  >Pandas</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >NumPy</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"  >Matplotlib</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"  >Google Cloud Platforms (GCP)</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transferable Skills Section -->
+    <section id="transferable-skills" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Transferable Skills</h2>
+            </div>
+            <div class="skills-container">
+                <!-- Soft Skills -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name"  >Leadership</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >Communication</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"  >Problem Solving</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" >Teamwork</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"  >Time Management</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"  >Critical Thinking</div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Languages -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-language"></i> Languages</h3>
+                    <div class="languages-container">
+                        <div class="language-item">
+                            <div class="language-circle" style="--percent: 90%">
+                                <div class="language-info">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                            <h4>English</h4>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-circle" style="--percent: 100%">
+                                <div class="language-info">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                            <h4>Chinese</h4>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-circle" style="--percent: 100%">
+                                <div class="language-info">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                            <h4>Taiwanese</h4>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-circle" style="--percent: 10%">
+                                <div class="language-info">
+                                    <span>10%</span>
+                                </div>
+                            </div>
+                            <h4>Japanese</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="certifications-list">
+                        <div class="certification-item">
+                            <div class="certification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-details">
+                                <h4>TOEFL iBT</h4>
+                                <p>Score: 102</p>
+                                
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-details">
+                                <h4>GRE</h4>
+                                <p>Score: 320</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Academic Projects Experience</h2>
+        </div>
+        
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+            <!-- Project 1: FIFA Player Value and Potential Prediction -->
+            <div class="project-item course">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/pic/FIFA.png" alt="FIFA Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FIFA Player Value and Potential Prediction</h3>
+                        <p class="project-description">Established a PySpark ML regression pipeline to predict player values and potential from a FIFA dataset (220k+ records). Visualized results with Matplotlib, identified undervalued players (R²=0.92). Deployed on GCP with CUDA-accelerated distributed training, integrated PostgreSQL for data management, and reduced data prep time by 10% over pandas.</p>
+                        <div class="project-tags">
+                            <span>PySpark</span>
+                            <span>Python</span>
+                            <span>Matplotlib</span>
+                            <span>GCP</span>
+                            <span>SQL</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- Optionally add links to code or report if available -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Real-Time Gesture Recognition and Control -->
+            <div class="project-item course">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/pic/gesture.png" alt="Gesture Recognition Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Real-Time Gesture Recognition and Control</h3>
+                        <p class="project-description">Constructed a CNN model with OpenCV and PyTorch to enable hands-free computer interface control (scroll, zoom) for accessibility. Used 5-fold cross-validation, grid search for hyperparameter tuning, and visualized results with Scikit-Learn and Matplotlib, increasing model accuracy by 15%.</p>
+                        <div class="project-tags">
+                            <span>PyTorch</span>
+                            <span>OpenCV</span>
+                            <span>Scikit-Learn</span>
+                            <span>Matplotlib</span>
+                            <span>Computer Vision</span>
+                            <span>Accessibility</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- Optionally add links to code or report if available -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: NLP Research Project (already present) -->
+            <div class="project-item research">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/pic/self_attention.jpg" alt="NLP Research Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Investigating Attention Layer Configurations for Enhanced Reasoning in NLP Models</h3>
+                        <p class="project-description">A research project exploring how attention layer depth and width impact logical and mathematical reasoning abilities in transformer models, using the ReClor dataset of logical reasoning questions from standardized graduate admission examinations.</p>
+                        <div class="project-tags">
+                            <span>Natural Language Processing</span>
+                            <span>Transformer Models</span>
+                            <span>Attention Mechanisms</span>
+                            <span>Logical Reasoning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Publications & Presentations</h2>
+            </div>
+            <div class="publications-container">
+                <!-- Academic Papers -->
+                <div class="publication-category">
+                    <h3><i class="fas fa-book"></i> Academic Papers</h3>
+                    <div class="publication-list">
+                        <div class="publication-item">
+                            <div class="publication-year">2024</div>
+                            <div class="publication-content">
+                                <h4>Co-first author, Unraveling the Alternative Process Configurations for More Environmentally Friendly Maleic Anhydride Production</h4>
+                                <p class="publication-authors">Ting-Yu Yu, Ching-Tai Kuo, <strong>Cheng-Kai Lai</strong> 
+                                    ,Wangyun Won, Bor-Yih Yu </p>
+                                <p class="publication-journal">Process System Engineering Laboratory, National Taiwan University</p>
+                                <p class="publication-abstract">This study proposes and evaluates alternative configurations for producing maleic anhydride (MA) through n-butane oxidation to enhance environmental friendliness. Using advanced numerical modeling with NumPy/SciPy, we achieved 97.52% energy efficiency and 99.9% purity. Our optimized configuration demonstrates superior environmental and economic performance compared to existing literature, with significant potential for industrial implementation.</p>
+                                <div class="publication-links">
+                                    <!-- <a href="#" class="btn-small"><i class="fas fa-file-pdf"></i> PDF</a> -->
+                                    <a href="https://doi.org/10.1016/j.psep.2024.09.116" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                                    <!-- <a href="#" class="btn-small"><i class="fas fa-quote-right"></i> Cite</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="publication-item">
+                            <div class="publication-year">20XX</div>
+                            <div class="publication-content">
+                                <h4>Publication Title 2</h4>
+                                <p class="publication-authors"><strong>Your Name</strong>, Author 2</p>
+                                <p class="publication-journal">Journal Name, Volume(Issue), Pages</p>
+                                <p class="publication-abstract">Brief abstract or description of the paper and its findings.</p>
+                                <div class="publication-links">
+                                    <a href="#" class="btn-small"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    <a href="#" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                                    <a href="#" class="btn-small"><i class="fas fa-quote-right"></i> Cite</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                
+                <!-- Conference Presentations -->
+                <!-- <div class="publication-category">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Conference Presentations</h3>
+                    <div class="publication-list">
+                        <div class="publication-item">
+                            <div class="publication-year">20XX</div>
+                            <div class="publication-content">
+                                <h4>Presentation Title 1</h4>
+                                <p class="publication-authors"><strong>Your Name</strong>, Co-presenter 2</p>
+                                <p class="publication-journal">Conference Name, Location</p>
+                                <p class="publication-abstract">Brief description of the presentation and its key points.</p>
+                                <div class="publication-links">
+                                    <a href="#" class="btn-small"><i class="fas fa-file-powerpoint"></i> Slides</a>
+                                    <a href="#" class="btn-small"><i class="fas fa-video"></i> Recording</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Posters -->
+                <!-- <div class="publication-category">
+                    <h3><i class="fas fa-image"></i> Posters</h3>
+                    <div class="publication-list">
+                        <div class="publication-item">
+                            <div class="publication-year">20XX</div>
+                            <div class="publication-content">
+                                <h4>Poster Title 1</h4>
+                                <p class="publication-authors"><strong>Your Name</strong>, Collaborator 2</p>
+                                <p class="publication-journal">Event Name, Location</p>
+                                <p class="publication-abstract">Brief description of the poster and its research focus.</p>
+                                <div class="publication-links">
+                                    <a href="#" class="btn-small"><i class="fas fa-image"></i> View Poster</a>
+                                    <a href="#" class="btn-small"><i class="fas fa-file-pdf"></i> PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+   
+    
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-frame">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Taipei, Taiwan / Pittsburgh, PA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p><a href="mailto:chengkai@andrew.cmu.edu">chengkai@andrew.cmu.edu</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+14126899440">+1 (412)-689-9440</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="form-frame">
+                        <h3>Send Me a Message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                <!-- FILEPATH: /Users/lck/Downloads/申請實習/Porfortlio/index.html -->
+                </div>
+                </div>
+                </div>
+                </section> -->
+
+                <!-- Contact Section -->
+
+                <section id="contact" class="section">
+                <!-- Decorative elements -->
+                <!-- <div class="contact-decorator decorator-1"></div> -->
+                <!-- <div class="contact-decorator decorator-2"></div> -->
+
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Get in Touch!</h2>
+                    </div>
+
+                    <div class="contact-container">
+                        <!-- Get In Touch Column -->
+                        <div class="contact-info">
+                            <!-- <h3>Get In Touch</h3> -->
+
+                            <!-- Location -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>My Locations</h4>
+                                    <p>Taipei, Taiwan / Pittsburgh, PA</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email Address</h4>
+                                    <p><a href="mailto:chengkai@andrew.cmu.edu">chengkai@andrew.cmu.edu</a></p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Phone Number</h4>
+                                    <p><a href="tel:+14126899440">+1 (412) 689-9440</a></p>
+                                </div>
+                            </div>
+
+                            <!-- Social Media -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Social Profiles</h4>
+                                    <div class="social-links">
+                                        <a href="https://www.linkedin.com/in/chengkailai" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://github.com/KevinChengKaiLai" target="_blank"><i class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </body>
+
+                <!-- Your other HTML content here -->
+
+                <!-- JavaScript -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Filter Projects
+                        const filterBtns = document.querySelectorAll('.filter-btn');
+                        const projectItems = document.querySelectorAll('.project-item');
+
+                        filterBtns.forEach(btn => {
+                            btn.addEventListener('click', function() {
+                                // Remove active class from all buttons
+                                filterBtns.forEach(btn => btn.classList.remove('active'));
+
+                                // Add active class to clicked button
+                                this.classList.add('active');
+
+                                // Get filter value
+                                const filterValue = this.getAttribute('data-filter');
+
+                                // Filter projects
+                                projectItems.forEach(item => {
+                                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                                        item.style.display = 'block';
+                                    } else {
+                                        item.style.display = 'none';
+                                    }
+                                });
+                            });
+                        });
+
+                        // Back to top button
+                        const backToTopBtn = document.querySelector('.back-to-top');
+
+                        window.addEventListener('scroll', function() {
+                            if (window.pageYOffset > 300) {
+                                backToTopBtn.classList.add('show');
+                            } else {
+                                backToTopBtn.classList.remove('show');
+                            }
+                        });
+
+                        backToTopBtn.addEventListener('click', function() {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            });
+                        });
+
+                        // Header scroll effect
+                        const header = document.querySelector('header');
+
+                        window.addEventListener('scroll', function() {
+                            if (window.pageYOffset > 50) {
+                                header.classList.add('header-scrolled');
+                            } else {
+                                header.classList.remove('header-scrolled');
+                            }
+                        });
+
+                        // Mobile menu toggle
+                        const menuBtn = document.querySelector('.menu-btn');
+                        const navLinks = document.querySelector('.nav-links');
+
+                        menuBtn.addEventListener('click', function() {
+                            navLinks.classList.toggle('active');
+                        });
+
+                        // Close menu when clicking outside
+                        document.addEventListener('click', function(event) {
+                            if (!event.target.closest('.nav-links') && !event.target.closest('.menu-btn')) {
+                                navLinks.classList.remove('active');
+                            }
+                        });
+
+                        // Popup functionality
+                        const popupBtns = document.querySelectorAll('[data-popup]');
+                        const popupOverlays = document.querySelectorAll('.popup-overlay');
+                        const popupCloses = document.querySelectorAll('.popup-close');
+
+                        popupBtns.forEach(btn => {
+                            btn.addEventListener('click', function() {
+                                const popupId = this.getAttribute('data-popup');
+                                const popup = document.getElementById(popupId);
+                                popup.classList.add('show');
+                                document.body.style.overflow = 'hidden';
+                            });
+                        });
+
+                        popupCloses.forEach(close => {
+                            close.addEventListener('click', function() {
+                                const popup = this.closest('.popup-overlay');
+                                popup.classList.remove('show');
+                                document.body.style.overflow = 'auto';
+                            });
+                        });
+
+                        popupOverlays.forEach(overlay => {
+                            overlay.addEventListener('click', function(event) {
+                                if (event.target === this) {
+                                    this.classList.remove('show');
+                                    document.body.style.overflow = 'auto';
+                                }
+                            });
+                        });
+
+                        // Initialize skill bars animation
+                        const skillItems = document.querySelectorAll('.skill-item');
+
+                        const animateSkills = () => {
+                            skillItems.forEach(item => {
+                                const level = item.querySelector('.skill-name').getAttribute('data-level');
+                                const skillLevel = item.querySelector('.skill-level');
+                                skillLevel.style.width = level;
+                            });
+                        };
+
+                        // Animate skills when they come into view
+                        const skillsSection = document.querySelector('.skills-container');
+
+                        if (skillsSection) {
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        animateSkills();
+                                        observer.unobserve(entry.target);
+                                    }
+                                });
+                            }, { threshold: 0.1 });
+
+                            observer.observe(skillsSection);
+                        }
+
+                        const lazyImages = document.querySelectorAll('img[data-src]');
+                        const imageObserver = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    const img = entry.target;
+                                    img.src = img.dataset.src;
+                                    img.classList.remove('lazy');
+                                    imageObserver.unobserve(img);
+                                }
+                            });
+                        });
+
+                        lazyImages.forEach(image => {
+                            imageObserver.observe(image);
+                        });
+
+                        const navLinksScroll = document.querySelectorAll('.nav-links a');
+                        navLinksScroll.forEach(link => {
+                            link.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                const targetId = this.getAttribute('href');
+                                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                            });
+                        });
+
+                        const form = document.querySelector('form');
+                        form.addEventListener('submit', function(event) {
+                            const name = document.getElementById('name').value;
+                            const email = document.getElementById('email').value;
+                            const message = document.getElementById('message').value;
+
+                            if (!name || !email || !message) {
+                                event.preventDefault();
+                                alert('Please fill out all fields.');
+                            }
+                        });
+                    });
+
+                    // Enhanced smooth scrolling with header offset
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const navLinksScroll = document.querySelectorAll('.nav-links a');
+                        const headerHeight = document.querySelector('header').offsetHeight;
+
+                        navLinksScroll.forEach(link => {
+                            link.addEventListener('click', function(e) {
+                                // Prevent default anchor behavior
+                                e.preventDefault();
+
+                                // Get the target section
+                                const targetId = this.getAttribute('href');
+                                const targetSection = document.querySelector(targetId);
+
+                                if (targetSection) {
+                                    // Calculate position with offset for header
+                                    const offsetTop = targetSection.offsetTop - (headerHeight - 20);
+
+                                    // Add active class to clicked link
+                                    navLinksScroll.forEach(nav => nav.classList.remove('active'));
+                                    this.classList.add('active');
+
+                                    // Smooth scroll to target
+                                    window.scrollTo({
+                                        top: offsetTop,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            });
+                        });
+
+                        // Mobile menu toggle functionality
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const menuBtn = document.querySelector('.menu-btn');
+                            const navLinks = document.querySelector('.nav-links');
+
+                            if (menuBtn && navLinks) {
+                                menuBtn.addEventListener('click', function() {
+                                    navLinks.classList.toggle('active');
+                                });
+                            }
+                        });
+
+                        // Update active menu item based on scroll position
+                        window.addEventListener('scroll', function() {
+                            let current = '';
+                            const sections = document.querySelectorAll('section');
+                            const scrollPosition = window.pageYOffset + headerHeight + 50;
+
+                            sections.forEach(section => {
+                                const sectionTop = section.offsetTop;
+                                const sectionHeight = section.offsetHeight;
+
+                                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                                    current = section.getAttribute('id');
+                                }
+                            });
+
+                            navLinksScroll.forEach(link => {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === '#' + current) {
+                                    link.classList.add('active');
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+                </html>
+</body>
+</html>
