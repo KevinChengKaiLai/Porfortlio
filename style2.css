@@ -1081,6 +1081,10 @@ nav {
 /* ============================================
    LAB SECTION - Lab information styling
    ============================================ */
+#lab .lab-container {
+    grid-template-columns: 1fr !important;
+}
+
 .lab-info {
     margin: 20px 0;
     padding: 20px;
