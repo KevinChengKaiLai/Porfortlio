@@ -605,8 +605,24 @@ nav {
 .about-text h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); transition: width 0.3s; }
 .about-text h3:hover::after { width: 100%; }
 .about-text p { margin-bottom: var(--space-sm); line-height: 1.8; font-size: var(--font-size-base); }
-.social-links { display: flex; margin-top: var(--space-md); }
-.social-links a { display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); color: var(--white); margin-right: 1rem; transition: var(--transition); position: relative; overflow: hidden; }
+.social-links { display: flex; margin-top: var(--space-md); align-items: center; }
+.social-links a { display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--primary-color); color: var(--white); margin-right: 1rem; transition: var(--transition); position: relative; overflow: hidden; font-size: var(--font-size-xl); }
+
+/* Remove margin-top for social-links inside contact-item to align with icon */
+.contact-item .social-links {
+    margin-top: 0;
+    align-items: center;
+    margin-right: 0;
+}
+
+/* For social profiles item, align all icons horizontally */
+.contact-item:has(.social-links) {
+    flex-wrap: nowrap;
+}
+
+.contact-item:has(.social-links) .contact-icon {
+    margin-right: 15px;
+}
 .social-links a::before { content: ''; position: absolute; width: 100%; height: 100%; background: rgba(255,255,255,0.2); top: -100%; left: 0; transition: top 0.3s; }
 .social-links a:hover { background: var(--accent-color); transform: translateY(-3px) rotate(360deg); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 .social-links a:hover::before { top: 0; }
@@ -933,6 +949,11 @@ nav {
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     gap: 50px;
     margin-bottom: 60px;
+}
+
+/* Professional section - single card takes full width */
+#professional .card-container {
+    grid-template-columns: 1fr;
 }
 
 .card {
@@ -1562,7 +1583,7 @@ nav {
 
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 50px;
     position: relative;
     z-index: 1;
@@ -1581,7 +1602,10 @@ nav {
     border-top: 5px solid var(--primary-color);
     border: 1px solid var(--border-color);
     height: 100%;
-    width: 150%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
 .contact-info:hover {
@@ -1615,35 +1639,37 @@ nav {
 
 .contact-item {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 35px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(45, 70, 185, 0.1);
-    transition: all 0.3s ease;
-}
-
-.contact-item:last-child {
-    border-bottom: none;
+    align-items: center;
     margin-bottom: 0;
     padding-bottom: 0;
+    border-bottom: none;
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background: rgba(45, 70, 185, 0.02);
+    border: 1px solid rgba(45, 70, 185, 0.1);
 }
 
 .contact-item:hover {
-    transform: translateX(5px);
+    background: rgba(45, 70, 185, 0.05);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: rgba(45, 70, 185, 0.1);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
     color: var(--primary-color);
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .contact-item:hover .contact-icon {
@@ -1652,17 +1678,46 @@ nav {
     transform: rotate(360deg);
 }
 
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+}
+
+/* Hide h4 for social profiles to align icons */
+.contact-item:has(.social-links) .contact-details h4,
+.contact-item .contact-details:has(.social-links) h4 {
+    display: none;
+}
+
+/* Align social-links with contact-icon - make them inline */
+.contact-item:has(.social-links) .contact-details,
+.contact-item .contact-details:has(.social-links) {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Ensure text aligns with icon center by matching heights */
+.contact-details {
+    height: 60px;
+}
+
 .contact-details h4 {
-    margin-bottom: 8px;
-    font-size: var(--font-size-lg);
+    margin-bottom: 2px;
+    font-size: var(--font-size-xl);
     font-weight: 600;
     color: var(--dark-color);
+    line-height: 1.2;
 }
 
 .contact-details p {
     color: var(--text-light);
-    font-size: var(--font-size-base);
-    line-height: 1.6;
+    font-size: var(--font-size-lg);
+    line-height: 1.3;
+    margin: 0;
 }
 
 .contact-details a {
@@ -2678,6 +2733,11 @@ footer::before {
     border-color: var(--border-color);
 }
 
+/* Dark mode - White contact headings */
+[data-theme="dark"] .contact-details h4 {
+    color: #ffffff !important;
+}
+
 [data-theme="dark"] .skill-bar, 
 [data-theme="dark"] .stat-item, 
 [data-theme="dark"] .course-item, 
@@ -3150,8 +3210,10 @@ html {
     }
     
     .contact-info {
-      width: 100% !important; /* Fix the 150% width issue */
+      width: 100% !important;
       margin-bottom: 2rem;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
     
     /* Lab info rows stack on mobile */
@@ -3277,6 +3339,16 @@ html {
     }
     
     .contact-details h4 {
+      font-size: var(--font-size-xl) !important;
+    }
+    
+    .contact-details p {
+      font-size: var(--font-size-lg) !important;
+    }
+    
+    .contact-icon {
+      width: 55px;
+      height: 55px;
       font-size: var(--font-size-lg) !important;
     }
   }
@@ -3448,6 +3520,9 @@ html {
 .social-links a,
 .contact-item .social-links a {
   background-color: var(--primary-color) !important;
+  width: 60px !important;
+  height: 60px !important;
+  font-size: var(--font-size-xl) !important;
 }
 
 /* Add hover effect for better interaction */
@@ -3467,8 +3542,8 @@ html {
   
   .social-links a,
   .contact-item .social-links a {
-    width: 35px;
-    height: 35px;
-    font-size: var(--font-size-base);
+    width: 55px;
+    height: 55px;
+    font-size: var(--font-size-lg);
   }
 }
