@@ -3328,16 +3328,20 @@ html {
     
     .project-card {
       flex-direction: column !important;
+      display: flex !important;
     }
     
     .project-card .project-img {
       width: 100% !important;
       min-width: unset !important;
-      height: 250px !important;
+      height: 220px !important;
+      flex: none !important;
     }
     
     .project-card .project-content {
       width: 100% !important;
+      flex: 1 !important;
+      padding: 18px !important;
     }
     
     .publications-container {
@@ -3892,7 +3896,7 @@ html {
   }
   
   .skill-bar {
-    height: 6px;
+    height: 4px !important;
   }
   
   /* Education section improvements */
@@ -3910,8 +3914,28 @@ html {
     font-size: 1.0625rem !important;
   }
   
+  .education-title p {
+    font-size: 0.875rem !important;
+  }
+  
   .education-body {
     padding: 20px 18px;
+  }
+  
+  .education-school h4 {
+    font-size: 0.9375rem !important;
+  }
+  
+  .education-date {
+    font-size: 0.8125rem !important;
+  }
+  
+  .education-details h5 {
+    font-size: 0.9375rem !important;
+  }
+  
+  .education-details p {
+    font-size: 0.875rem !important;
   }
   
   .stat-item {
@@ -3919,27 +3943,106 @@ html {
   }
   
   .stat-value {
-    font-size: 1.0625rem;
+    font-size: 1.0625rem !important;
   }
   
   .stat-label {
-    font-size: 0.8125rem;
+    font-size: 0.8125rem !important;
   }
   
-  /* Project improvements */
+  .course-list li {
+    font-size: 0.875rem !important;
+  }
+  
+  .course-item {
+    font-size: 0.875rem !important;
+  }
+  
+  /* Timeline section improvements */
+  .timeline-content {
+    padding: 18px 20px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.0625rem !important;
+  }
+  
+  .timeline-content .date {
+    font-size: 0.8125rem !important;
+  }
+  
+  .timeline-content p {
+    font-size: 0.875rem !important;
+  }
+  
+  .timeline-item {
+    padding: 8px 30px;
+  }
+  
+  /* Project improvements - Force vertical layout on mobile */
   .project-card {
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
+    flex-direction: column !important;
+    display: flex !important;
   }
   
-  .project-img {
-    height: 200px !important;
+  .project-item .project-card {
+    flex-direction: column !important;
+  }
+  
+  .project-card .project-img {
+    width: 100% !important;
+    height: 220px !important;
+    flex: none !important;
+    min-width: 0 !important;
+    position: relative !important;
+  }
+  
+  .project-card .project-content {
+    width: 100% !important;
+    flex: 1 !important;
+    padding: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+    min-height: 200px !important;
+  }
+  
+  .project-title {
+    font-size: 1.125rem !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+  }
+  
+  .project-description {
+    font-size: 0.9375rem !important;
+    margin-bottom: 15px !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+  
+  .project-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-bottom: 15px !important;
   }
   
   .project-tags span {
     font-size: 0.75rem;
     padding: 5px 12px;
+  }
+  
+  .project-links {
+    display: flex !important;
+    gap: 10px !important;
+  }
+  
+  /* Make skill bars thinner */
+  .skill-bar {
+    height: 4px !important;
   }
   
   /* Lab section improvements */
@@ -3964,18 +4067,107 @@ html {
     font-size: 0.875rem !important;
   }
   
+  /* Academic/Education section 480px */
   .education-icon {
     width: 45px;
     height: 45px;
     font-size: 0.875rem;
   }
   
+  .education-title h3 {
+    font-size: 1rem !important;
+  }
+  
+  .education-title p {
+    font-size: 0.8125rem !important;
+  }
+  
+  .education-school h4 {
+    font-size: 0.875rem !important;
+  }
+  
+  .education-date {
+    font-size: 0.75rem !important;
+  }
+  
+  .education-details h5 {
+    font-size: 0.875rem !important;
+  }
+  
+  .education-details p {
+    font-size: 0.8125rem !important;
+  }
+  
   .stat-value {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
   
   .stat-label {
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
+  }
+  
+  .course-list li {
+    font-size: 0.8125rem !important;
+  }
+  
+  .course-item {
+    font-size: 0.8125rem !important;
+  }
+  
+  .timeline-content {
+    padding: 15px 18px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1rem !important;
+  }
+  
+  .timeline-content .date {
+    font-size: 0.75rem !important;
+  }
+  
+  .timeline-content p {
+    font-size: 0.8125rem !important;
+  }
+  
+  .timeline-item {
+    padding: 8px 25px;
+  }
+  
+  /* Projects vertical layout */
+  .project-card {
+    flex-direction: column !important;
+  }
+  
+  .project-card .project-img {
+    width: 100% !important;
+    height: 200px !important;
+  }
+  
+  .project-card .project-content {
+    width: 100% !important;
+    padding: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 180px !important;
+  }
+  
+  .project-title {
+    font-size: 1.0625rem !important;
+  }
+  
+  .project-description {
+    font-size: 0.875rem !important;
+  }
+  
+  .project-tags span {
+    font-size: 0.7rem !important;
+    padding: 4px 10px;
+  }
+  
+  /* Thinner skill bars */
+  .skill-bar {
+    height: 3px !important;
   }
 }
 
@@ -3985,5 +4177,108 @@ html {
     width: 44px !important;
     height: 44px !important;
     font-size: 0.8125rem !important;
+  }
+  
+  /* Academic/Education section 380px */
+  .education-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8125rem;
+  }
+  
+  .education-title h3 {
+    font-size: 0.9375rem !important;
+  }
+  
+  .education-title p {
+    font-size: 0.75rem !important;
+  }
+  
+  .education-school h4 {
+    font-size: 0.8125rem !important;
+  }
+  
+  .education-date {
+    font-size: 0.7rem !important;
+  }
+  
+  .education-details h5 {
+    font-size: 0.8125rem !important;
+  }
+  
+  .education-details p {
+    font-size: 0.75rem !important;
+  }
+  
+  .stat-value {
+    font-size: 0.9375rem !important;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem !important;
+  }
+  
+  .course-list li {
+    font-size: 0.75rem !important;
+  }
+  
+  .course-item {
+    font-size: 0.75rem !important;
+  }
+  
+  .timeline-content {
+    padding: 12px 15px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 0.9375rem !important;
+  }
+  
+  .timeline-content .date {
+    font-size: 0.7rem !important;
+  }
+  
+  .timeline-content p {
+    font-size: 0.75rem !important;
+  }
+  
+  .timeline-item {
+    padding: 8px 20px;
+  }
+  
+  /* Projects vertical layout */
+  .project-card {
+    flex-direction: column !important;
+  }
+  
+  .project-card .project-img {
+    width: 100% !important;
+    height: 180px !important;
+  }
+  
+  .project-card .project-content {
+    width: 100% !important;
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 160px !important;
+  }
+  
+  .project-title {
+    font-size: 1rem !important;
+  }
+  
+  .project-description {
+    font-size: 0.8125rem !important;
+  }
+  
+  .project-tags span {
+    font-size: 0.65rem !important;
+    padding: 4px 8px;
+  }
+  
+  /* Even thinner skill bars */
+  .skill-bar {
+    height: 3px !important;
   }
 }
