@@ -3161,6 +3161,19 @@ html {
   }
   
   @media (max-width: 768px) {
+    /* Override font size variables for mobile */
+    :root {
+      --font-size-xs: 0.75rem;    /* 12px */
+      --font-size-sm: 0.875rem;   /* 14px */
+      --font-size-base: 0.9375rem; /* 15px */
+      --font-size-lg: 1rem;        /* 16px */
+      --font-size-xl: 1.125rem;    /* 18px */
+      --font-size-2xl: 1.375rem;   /* 22px */
+      --font-size-3xl: 1.75rem;    /* 28px */
+      --font-size-4xl: 2.25rem;    /* 36px */
+      --font-size-header-link: 1rem; /* 16px */
+    }
+    
     .grid-3 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -3173,7 +3186,7 @@ html {
     
     /* Make header text smaller */
     .logo {
-      font-size: var(--font-size-xl) !important;
+      font-size: 1.25rem !important;
     }
     
     /* Nav links */
@@ -3203,24 +3216,40 @@ html {
     }
     
     .nav-links a {
-      font-size: var(--font-size-lg);
+      font-size: 0.9375rem !important;
     }
     
     /* Section spacing */
     .section {
-      padding: 3rem 0;
+      padding: 2.5rem 0;
     }
     
     /* Typography - Make ALL titles smaller */
+    h1 {
+      font-size: 1.5rem !important;
+    }
+    
+    h2 {
+      font-size: 1.25rem !important;
+    }
+    
+    h3 {
+      font-size: 1.125rem !important;
+    }
+    
+    h4 {
+      font-size: 1rem !important;
+    }
+    
     .section-title h2 {
-      font-size: var(--font-size-2xl) !important;
+      font-size: 1.375rem !important;
     }
     
     /* Card titles */
     .card-title, 
     .project-title, 
     .education-title h3 {
-      font-size: var(--font-size-xl) !important;
+      font-size: 1.125rem !important;
     }
     
     /* Subtitles */
@@ -3230,7 +3259,7 @@ html {
     .card-subtitle-location,
     .education-title p,
     .publication-journal {
-      font-size: var(--font-size-base) !important;
+      font-size: 0.875rem !important;
     }
     
     /* Convert all multi-column layouts to single column */
@@ -3349,11 +3378,54 @@ html {
     
     /* Hero section text */
     .hero-content h1 {
-      font-size: var(--font-size-2xl) !important;
+      font-size: 1.5rem !important;
+      margin-bottom: 0.75rem;
     }
     
-    .hero-content p {
-      font-size: var(--font-size-base) !important;
+    .hero-content > p {
+      font-size: 0.9375rem !important;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero-resume-card {
+      flex-direction: column;
+      padding: 15px;
+    }
+    
+    .resume-preview {
+      flex: none;
+      height: auto;
+      max-height: 400px;
+      margin-bottom: 15px;
+    }
+    
+    .hero-resume-info {
+      padding: 15px;
+    }
+    
+    .hero-highlights {
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    
+    .highlight-item {
+      gap: 12px;
+    }
+    
+    .highlight-icon {
+      width: 35px;
+      height: 35px;
+      font-size: 0.875rem;
+    }
+    
+    .highlight-text span {
+      font-size: 0.875rem !important;
+    }
+    
+    .hero-buttons .btn {
+      padding: 0.65rem 1.25rem;
+      font-size: 0.875rem;
+      min-width: 140px;
     }
     
     /* Card adjustments for improved mobile display */
@@ -3368,17 +3440,29 @@ html {
     
     /* Ensure proper spacing and margins */
     .container {
-      padding: 0 15px;
+      padding: 0 20px;
     }
     
     /* Allow more breathing room for content */
     .card-body, 
     .project-content,
-    .education-body,
-    .publication-item,
+    .education-body {
+      padding: 18px;
+    }
+    
+    .publication-item {
+      padding: 15px 0;
+    }
+    
     .contact-info,
     .contact-form {
-      padding: 20px;
+      padding: 25px 18px;
+    }
+    
+    .education-card,
+    .card,
+    .skills-category {
+      margin-bottom: 25px;
     }
     
     /* Fix font sizes for better readability */
@@ -3397,21 +3481,39 @@ html {
     /* Contact section */
     .contact-info h3, 
     .contact-form h3 {
-      font-size: var(--font-size-base) !important;
+      font-size: 1.25rem !important;
+      margin-bottom: 20px;
     }
     
     .contact-details h4 {
-      font-size: var(--font-size-xl) !important;
+      font-size: 0.9375rem !important;
     }
     
     .contact-details p {
-      font-size: var(--font-size-base) !important;
+      font-size: 0.875rem !important;
     }
     
     .contact-icon {
-      width: 55px;
-      height: 55px;
-      font-size: var(--font-size-lg) !important;
+      width: 50px;
+      height: 50px;
+      font-size: 0.9375rem !important;
+    }
+    
+    .contact-item {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 12px 15px;
+      font-size: 0.9375rem;
+    }
+    
+    button[type="submit"] {
+      padding: 12px 24px;
+      font-size: 0.9375rem;
     }
   }
   
@@ -3426,11 +3528,103 @@ html {
     }
   }
 
-  /* Extra small screens like older iPhones */
+  /* Mid-range phones - iPhone 12/13, iPhone SE 2020+, etc */
+  @media (max-width: 480px) {
+    /* Further optimize font sizes */
+    :root {
+      --font-size-xs: 0.7rem;      /* 11.2px */
+      --font-size-sm: 0.8125rem;   /* 13px */
+      --font-size-base: 0.875rem;  /* 14px */
+      --font-size-lg: 0.9375rem;   /* 15px */
+      --font-size-xl: 1.0625rem;   /* 17px */
+      --font-size-2xl: 1.25rem;    /* 20px */
+      --font-size-3xl: 1.625rem;   /* 26px */
+      --font-size-4xl: 2rem;       /* 32px */
+    }
+    
+    h1 { font-size: 1.375rem !important; }
+    h2 { font-size: 1.125rem !important; }
+    h3 { font-size: 1rem !important; }
+    h4 { font-size: 0.9375rem !important; }
+    
+    .section-title h2 {
+      font-size: 1.25rem !important;
+    }
+    
+    .hero-content h1 {
+      font-size: 1.375rem !important;
+    }
+    
+    .hero-content > p {
+      font-size: 0.875rem !important;
+    }
+    
+    .card-title, 
+    .project-title {
+      font-size: 1.0625rem !important;
+    }
+    
+    .container {
+      padding: 0 18px;
+    }
+    
+    .section {
+      padding: 2rem 0;
+    }
+    
+    .card-body, 
+    .project-content,
+    .education-body {
+      padding: 15px;
+    }
+    
+    .contact-info,
+    .contact-form {
+      padding: 20px 15px;
+    }
+    
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      font-size: 0.875rem !important;
+    }
+    
+    .hero-resume-card {
+      padding: 12px;
+    }
+    
+    .highlight-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 0.8125rem;
+    }
+    
+    .btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.8125rem;
+    }
+    
+    p, .card-text, .project-description {
+      font-size: 0.875rem !important;
+    }
+  }
+
+  /* Extra small screens like older iPhones and small Android phones */
   @media (max-width: 380px) {
     /* Further reduce font sizes */
+    :root {
+      --font-size-xs: 0.65rem;     /* 10.4px */
+      --font-size-sm: 0.75rem;     /* 12px */
+      --font-size-base: 0.8125rem; /* 13px */
+      --font-size-lg: 0.875rem;    /* 14px */
+      --font-size-xl: 1rem;        /* 16px */
+      --font-size-2xl: 1.125rem;   /* 18px */
+      --font-size-3xl: 1.5rem;     /* 24px */
+      --font-size-4xl: 1.875rem;   /* 30px */
+    }
+    
     .logo {
-      font-size: var(--font-size-lg) !important;
+      font-size: 1.0625rem !important;
     }
     
     .theme-toggle {
@@ -3438,44 +3632,74 @@ html {
       height: 44px;
       bottom: 15px;
       left: 15px;
-      font-size: var(--font-size-lg);
+      font-size: 0.875rem;
     }
     
-    h1 {
-      font-size: var(--font-size-xl) !important;
+    h1 { font-size: 1.25rem !important; }
+    h2 { font-size: 1.0625rem !important; }
+    h3 { font-size: 0.9375rem !important; }
+    h4 { font-size: 0.875rem !important; }
+    
+    .section-title h2 {
+      font-size: 1.125rem !important;
     }
     
-    h2 {
-      font-size: var(--font-size-xl) !important;
+    .hero-content h1 {
+      font-size: 1.25rem !important;
     }
     
-    h3 {
-      font-size: var(--font-size-lg) !important;
+    .card-title, .project-title {
+      font-size: 1rem !important;
     }
     
     /* Further reduce paddings */
+    .container {
+      padding: 0 15px;
+    }
+    
     .card-body, 
     .project-content,
-    .education-body,
-    .publication-item,
+    .education-body {
+      padding: 12px;
+    }
+    
+    .publication-item {
+      padding: 12px 0;
+    }
+    
     .contact-info,
     .contact-form {
-      padding: 15px;
+      padding: 18px 12px;
     }
     
     /* Reduce icon sizes */
-    .contact-icon, 
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 0.8125rem !important;
+    }
+    
     .highlight-icon, 
     .education-icon {
-      width: 35px;
-      height: 35px;
-      font-size: var(--font-size-base);
+      width: 30px;
+      height: 30px;
+      font-size: 0.75rem;
     }
     
     /* Make sure buttons fit */
-    .btn {
-      padding: 0.6rem 1rem;
-      font-size: var(--font-size-base);
+    .btn, .hero-buttons .btn {
+      padding: 0.55rem 0.9rem;
+      font-size: 0.75rem;
+    }
+    
+    .social-links a {
+      width: 48px;
+      height: 48px;
+      font-size: 0.875rem;
+    }
+    
+    p, .card-text, .project-description {
+      font-size: 0.8125rem !important;
     }
   }
 
@@ -3489,22 +3713,26 @@ html {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding-bottom: 25px;
+      padding-bottom: 20px;
       position: relative;
+    }
+    
+    .publication-category {
+      padding: 20px 18px;
     }
     
     /* Move year to the top */
     .publication-year {
       position: relative;
       width: auto;
-      font-size: var(--font-size-lg) !important;
+      font-size: 0.9375rem !important;
       font-weight: 700;
       color: var(--primary-color);
       text-align: left;
-      padding: 5px 15px 5px 0;
+      padding: 5px 12px 5px 0;
       background-color: transparent;
       border-bottom: 2px solid rgba(45, 70, 185, 0.2);
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       min-width: 0;
       height: auto;
       align-self: flex-start;
@@ -3518,56 +3746,85 @@ html {
     
     /* Adjust title font size */
     .publication-content h4 {
-      font-size: var(--font-size-lg) !important;
+      font-size: 0.9375rem !important;
       line-height: 1.4;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     
     /* Make authors and journal smaller */
     .publication-authors,
     .publication-journal {
-      font-size: var(--font-size-base) !important;
-      margin-bottom: 8px;
+      font-size: 0.875rem !important;
+      margin-bottom: 6px;
     }
     
     /* Make abstract more readable */
     .publication-abstract {
-      font-size: var(--font-size-base) !important;
+      font-size: 0.875rem !important;
       line-height: 1.5;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
     
     /* Improve spacing of links */
     .publication-links {
-      margin-top: 10px;
+      margin-top: 8px;
     }
     
     .publication-links .btn-small {
       padding: 5px 10px;
-      font-size: var(--font-size-sm);
+      font-size: 0.75rem;
     }
     
     /* Add more space between multiple papers */
     .publication-item:not(:last-child) {
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+    }
+    
+    .publication-category h3 {
+      font-size: 1.0625rem !important;
     }
   }
   
-  /* Extra small screens */
-  @media (max-width: 380px) {
+  /* Extra small screens - publication adjustments */
+  @media (max-width: 480px) {
     .publication-year {
-      font-size: var(--font-size-base) !important;
+      font-size: 0.875rem !important;
     }
     
     .publication-content h4 {
-      font-size: var(--font-size-lg) !important;
+      font-size: 0.875rem !important;
     }
     
     .publication-authors,
     .publication-journal,
     .publication-abstract {
-      font-size: var(--font-size-sm) !important;
+      font-size: 0.8125rem !important;
+    }
+    
+    .publication-category {
+      padding: 18px 15px;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .publication-year {
+      font-size: 0.8125rem !important;
+    }
+    
+    .publication-content h4 {
+      font-size: 0.8125rem !important;
+    }
+    
+    .publication-authors,
+    .publication-journal,
+    .publication-abstract {
+      font-size: 0.75rem !important;
+    }
+    
+    .publication-links .btn-small {
+      font-size: 0.7rem;
+      padding: 4px 8px;
     }
   }
 
@@ -3595,17 +3852,138 @@ html {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific adjustments for mobile */
+  /* Specific adjustments for mobile */
 @media (max-width: 768px) {
   .social-links {
     justify-content: center;
     margin-top: 15px;
+    gap: 12px;
   }
   
   .social-links a,
   .contact-item .social-links a {
-    width: 55px;
-    height: 55px;
-    font-size: var(--font-size-lg);
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 0.9375rem !important;
+    margin-right: 0.75rem;
+  }
+  
+  /* About section improvements */
+  .about-text h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .about-text p {
+    font-size: 0.9375rem !important;
+    line-height: 1.65;
+  }
+  
+  .about-img {
+    max-height: 380px;
+  }
+  
+  /* Skills section improvements */
+  .skills-category {
+    padding: 20px 18px;
+  }
+  
+  .skill-name {
+    font-size: 0.875rem !important;
+  }
+  
+  .skill-bar {
+    height: 6px;
+  }
+  
+  /* Education section improvements */
+  .education-header {
+    padding: 18px;
+  }
+  
+  .education-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 0.9375rem;
+  }
+  
+  .education-title h3 {
+    font-size: 1.0625rem !important;
+  }
+  
+  .education-body {
+    padding: 20px 18px;
+  }
+  
+  .stat-item {
+    padding: 12px 18px;
+  }
+  
+  .stat-value {
+    font-size: 1.0625rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8125rem;
+  }
+  
+  /* Project improvements */
+  .project-card {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+  
+  .project-img {
+    height: 200px !important;
+  }
+  
+  .project-tags span {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+  
+  /* Lab section improvements */
+  .lab-info {
+    padding: 15px;
+  }
+  
+  .lab-info-item strong {
+    font-size: 0.875rem;
+  }
+  
+  .lab-info-item span {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links a,
+  .contact-item .social-links a {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .education-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 0.875rem;
+  }
+  
+  .stat-value {
+    font-size: 1rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .social-links a,
+  .contact-item .social-links a {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 0.8125rem !important;
   }
 }
